@@ -55,7 +55,7 @@ class LogLSTM(nn.Module):
             # Special tokens (<PAD>, <UNK>) will remain initialized as zeros
             events_found = 0
             for _, row in embeddings_df.iterrows():
-                event_id = str(row['EventId'])
+                event_id = str(int(row['EventId'])) if pd.notna(row['EventId']) else ""
                 if event_id in vocab:
                     idx = vocab[event_id]
                     # The rest of the columns are the embedding dimensions

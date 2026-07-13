@@ -7,3 +7,4 @@ sentence-transformers==3.0.1
 polars==1.6.0
 torch>=2.0.0
 pandas==2.2.2
+scikit-learn>=1.0.0

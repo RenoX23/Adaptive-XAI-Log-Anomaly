@@ -28,16 +28,16 @@
 - [x] **Audit Checkpoint 2:** Ensure the baseline model is competitive with existing literature (DeepLog, etc.).
 - [x] *Git Commit Phase 2 Final*
 
-## Phase 3: Explainability (XAI Integration)
-- [ ] *Pivot Required:* Download and parse the BGL public dataset for real-world XAI validation.
-- [ ] *Pivot Required:* Replace Top-K anomaly detection with dynamic probability thresholding.
-- [ ] Integrate Attention mechanisms into the sequence model.
-- [ ] Apply **SHAP** (DeepExplainer) to extract feature importance scores.
-- [ ] Generate visualizations showing exactly which tokens triggered anomalies.
-- [ ] **Audit Checkpoint 3:** Verify that SHAP values are mathematically sound and the explanations are intuitive and robust.
-- [ ] Git Commit Phase 3.
+## Phase 3: Explainability (XAI Integration) (DONE)
+- [x] *Pivot Required:* Download and parse the BGL public dataset for real-world XAI validation.
+- [x] *Pivot Required:* Replace Top-K anomaly detection with dynamic probability thresholding (validation holdout).
+- [x] Integrate Bidirectional LogTransformer instead of standard Attention to prevent recursive bias.
+- [x] Apply **SHAP** (GradientExplainer) to mathematically aggregate L1-norm feature importance scores.
+- [x] Generate visualizations showing exactly which tokens triggered anomalies.
+- [x] **Audit Checkpoint 3:** Verify that SHAP values are mathematically sound and the explanations are intuitive and robust. (PASSED)
+- [x] Git Commit Phase 3.
 
-## Phase 4: Concept Drift Adaptation
+## Phase 4: Concept Drift Adaptation (IN PROGRESS)
 - [ ] Simulate or identify concept drift in the test dataset (e.g., using BGL's temporal nature).
 - [ ] Integrate River ML's **ADWIN** algorithm to monitor the model's loss/error rate.
 - [ ] Implement an online learning loop to update the model when drift is detected.
