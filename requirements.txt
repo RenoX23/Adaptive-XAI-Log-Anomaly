@@ -1,0 +1,8 @@
+drain3==0.9.11
+numpy==1.26.4
+requests==2.32.3
+urllib3==2.2.2
+tqdm==4.66.4
+sentence-transformers==3.0.1
+polars==1.6.0
+# We will add PyTorch, River, and SHAP later in Phase 2 & 3 to keep this initial environment clean

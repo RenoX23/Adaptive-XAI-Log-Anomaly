@@ -1,0 +1,19 @@
+# Virtual Environment
+venv/
+env/
+
+# Python Cache
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Data & Models (Prevent pushing large datasets, raw logs, or model weights)
+data/
+models/
+results/
+
+# IDEs and OS files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
