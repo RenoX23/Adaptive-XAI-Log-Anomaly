@@ -41,10 +41,8 @@ class LogSequenceDataset(Dataset):
             # Flatten into sliding windows for Next-Event Prediction
             for seq in self.sequences:
                 indexed_seq = [self.vocab.get(event, self.vocab['<UNK>']) for event in seq]
-                # Pad sequence if it is too short to extract even one window
-                if len(indexed_seq) <= self.window_size:
-                    pad_len = self.window_size + 1 - len(indexed_seq)
-                    indexed_seq = [self.vocab['<PAD>']] * pad_len + indexed_seq
+                # Unconditionally pad sequence to extract sliding windows for every event
+                indexed_seq = [self.vocab['<PAD>']] * self.window_size + indexed_seq
                     
                 for i in range(len(indexed_seq) - self.window_size):
                     window = indexed_seq[i:i + self.window_size]
@@ -54,9 +52,8 @@ class LogSequenceDataset(Dataset):
             # Keep entire sequences for Block-Level Evaluation
             for idx, seq in enumerate(self.sequences):
                 indexed_seq = [self.vocab.get(event, self.vocab['<UNK>']) for event in seq]
-                if len(indexed_seq) <= self.window_size:
-                    pad_len = self.window_size + 1 - len(indexed_seq)
-                    indexed_seq = [self.vocab['<PAD>']] * pad_len + indexed_seq
+                # Unconditionally pad sequence to evaluate every event
+                indexed_seq = [self.vocab['<PAD>']] * self.window_size + indexed_seq
                 self.samples.append((indexed_seq, self.labels[idx]))
                 
     def __len__(self):
