@@ -22,8 +22,8 @@
 ## Phase 2: Sequence Modeling (The Backbone)
 - [x] **Step 2.1:** Implement PyTorch Dataset/DataLoader for sequence ingestion (`src/dataset.py`).
 - [x] *Git Commit 2.1*
-- [ ] **Step 2.2:** Implement baseline Sequence Model architecture (e.g., LSTM) (`src/model.py`).
-- [ ] *Git Commit 2.2*
+- [x] **Step 2.2:** Implement baseline Sequence Model architecture (e.g., LSTM) (`src/model.py`).
+- [x] *Git Commit 2.2*
 - [ ] **Step 2.3:** Write training/evaluation loop and calculate baseline metrics (Precision, Recall, F1) (`src/train.py`).
 - [ ] **Audit Checkpoint 2:** Ensure the baseline model is competitive with existing literature (DeepLog, etc.).
 - [ ] *Git Commit Phase 2 Final*
