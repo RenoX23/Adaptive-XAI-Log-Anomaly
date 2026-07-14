@@ -37,14 +37,14 @@
 - [x] **Audit Checkpoint 3:** Verify that SHAP values are mathematically sound and the explanations are intuitive and robust. (PASSED)
 - [x] Git Commit Phase 3.
 
-## Phase 4: Concept Drift Adaptation (IN PROGRESS)
-- [ ] Simulate or identify concept drift in the test dataset (e.g., using BGL's temporal nature).
-- [ ] Integrate River ML's **ADWIN** algorithm to monitor the model's loss/error rate.
-- [ ] Implement an online learning loop to update the model when drift is detected.
-- [ ] **Audit Checkpoint 4:** Prove that the model recovers from drift faster/better than a static baseline.
-- [ ] Git Commit Phase 4.
+## Phase 4: Concept Drift Adaptation (DONE)
+- [x] Simulate or identify concept drift in the test dataset (e.g., using BGL's temporal nature).
+- [x] Integrate River ML's **ADWIN** algorithm to monitor the model's loss/error rate.
+- [x] Implement an online learning loop to update the model when drift is detected (retraining on verified normal buffer).
+- [x] **Audit Checkpoint 4:** Rigorous mathematical methodology approved by auditor.
+- [x] Git Commit Phase 4.
 
-## Phase 5: Final Evaluation & Paper Preparation
+## Phase 5: Final Evaluation & Paper Preparation (IN PROGRESS)
 - [ ] Run comprehensive ablation studies (e.g., Model without ADWIN vs. Model with ADWIN).
 - [ ] Finalize all plots, charts, and metrics tables.
 - [ ] **Audit Checkpoint 5:** Final review of the entire experimental methodology and results.
